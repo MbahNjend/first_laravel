@@ -5,25 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    @vite('resource/css/app.css')
 </head>
 <body class="bg-gray-100">
 
     <!-- Header -->
     <header class="bg-gray-800">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-white-500">Mbah Njend</h1>
+            <h1 class="text-2xl font-bold text-white">Mbah Njend</h1>
             <nav>
-                <a href="#Home" class="text-gray-400 hover:text-blue-500 px-4">Home</a>
-                <a href="#features" class="text-gray-400 hover:text-blue-500 px-4">Features</a>
-                <a href="#contact" class="text-gray-400 hover:text-blue-500 px-4">Contact</a>
+                <a href="{{ url ('/home')}}" class="text-gray-400 hover:text-blue-500 px-4">Home</a>
+                <a href="{{ url ('/about')}}" class="text-gray-400 hover:text-blue-500 px-4">About</a>
+                <a href="{{ url ('/contact')}}" class="text-gray-400 hover:text-blue-500 px-4">Contact</a>
+                {{-- <button class="bg-gray-800 text-gray-400 px-4 py-2 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-gray-500 hover:text-white" id="profileButton">
+                    Profile
+                </button> --}}
+                
             </nav>
         </div>
+        
+        
     </header>
 
     <!-- Hero Section -->
     <section class="bg-gray-600 text-white py-20">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-4">Welcome to Our Service</h2>
+            <h2 class="text-4xl font-bold mb-4">Welcome My Website</h2>
             <p class="mb-8">We provide the best solutions for your business needs.</p>
             <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200">Get Started</a>
         </div>
@@ -72,4 +79,7 @@
     </footer>
 
 </body>
-</html>
+</html> 
+
+
+
