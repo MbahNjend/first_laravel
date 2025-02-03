@@ -10,6 +10,7 @@
 <body class="bg-gray-100">
 
     <!-- Header -->
+    
     <header class="bg-gray-800">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-white">Mbah Njend</h1>
@@ -17,6 +18,7 @@
                 <a href="{{ url ('/home')}}" class="text-gray-400 hover:text-blue-500 px-4">Home</a>
                 <a href="{{ url ('/about')}}" class="text-gray-400 hover:text-blue-500 px-4">About</a>
                 <a href="{{ url ('/contact')}}" class="text-gray-400 hover:text-blue-500 px-4">Contact</a>
+                <a href="{{ url ('/products')}}" class="text-gray-400 hover:text-blue-500 px-4">Products</a>
                 {{-- <button class="bg-gray-800 text-gray-400 px-4 py-2 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-gray-500 hover:text-white" id="profileButton">
                     Profile
                 </button> --}}
@@ -26,7 +28,6 @@
         
         
     </header>
-
     <!-- Hero Section -->
     <section class="bg-gray-600 text-white py-20">
         <div class="container mx-auto text-center">
@@ -57,7 +58,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    {{-- <!-- Contact Section -->
     <section id="contact" class="bg-gray-200 py-20">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
@@ -69,7 +70,7 @@
                 <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-500">Send Message</button>
             </form>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Footer -->
     <footer class="bg-white py-4">

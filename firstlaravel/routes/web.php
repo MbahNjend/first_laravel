@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +35,21 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
-Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
-Route::get('/contact/success', [ContactController::class, 'success'])->name('contact.success');
+Route::get('/products', function () {
+    return view('products');
+});
 
+
+
+
+
+
+
+// Route untuk menampilkan halaman produk
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+
+// Route untuk menampilkan form
+Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.show');
+
+// Route untuk menangani pengiriman form
+Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');

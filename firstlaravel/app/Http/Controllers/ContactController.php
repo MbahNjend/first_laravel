@@ -3,31 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ContactController extends Controller
 {
+    // Menampilkan form kontak
     public function showForm()
     {
-        return view('contact.form');
+        return view('contact');
     }
 
+    // Menangani pengiriman form
     public function submitForm(Request $request)
     {
-        // Validate the request data
+        // Validasi input
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'message' => 'required|string|max:1000',
+            'message' => 'required|string',
         ]);
 
-        // Here you would typically save the data to the database or send an email
+        // Simpan data ke database atau kirim email (opsional)
+        // Contoh: Simpan ke database
+        // Contact::create($request->all());
 
-        // Redirect to the success page
-        return redirect()->route('contact.success');
-    }
+        // Set session untuk pesan sukses
+        Session::flash('success', 'Success Submit!');
 
-    public function success()
-    {
-        return view('contact.success');
+        // Redirect kembali ke halaman form
+        return redirect()->route('contact.show');
     }
 }
