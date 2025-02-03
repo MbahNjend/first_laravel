@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SubscriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +40,9 @@ Route::get('/products', function () {
     return view('products');
 });
 
-
+Route::get('/subscription', function (){
+    return view('subscription');
+});
 
 
 
@@ -53,3 +56,6 @@ Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.sh
 
 // Route untuk menangani pengiriman form
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
+
+// Route::get('/subscription', [SubscriptionController::class,'index']);
+// Route::post('/subscription', [SubscriptionController::class, 'subscriptionForm'])->name('subscription.submit');
